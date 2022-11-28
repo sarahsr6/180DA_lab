@@ -1,7 +1,7 @@
 from subprocess import run
 from time import sleep
 
-for i in range(5):
+for i in range(1):
   run('vcgencmd display_power 0', shell=True)
   sleep(1)
   #run('xrandr --output HDMI-1 --auto', shell=True)
