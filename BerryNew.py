@@ -403,8 +403,10 @@ while True:
     
     if((CFangleX<70) and (CFangleX>-70)):
         print("off")
+        subprocess.run('vcgencmd display_power 0', shell=True)
     else:
         print("on")
+        subprocess.run('vcgencmd display_power 1', shell=True)
 
     #slow program down a bit, makes the output more readable
     time.sleep(0.03)
