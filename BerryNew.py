@@ -401,7 +401,7 @@ while True:
 
     print(outputString)
     
-    if((CFangleX<70) and (CFangleX>-20)):
+    if((CFangleX<70) and (CFangleX>-70)):
         print("off")
     else:
         print("on")
