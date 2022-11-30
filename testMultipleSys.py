@@ -6,9 +6,14 @@
 #sleep(y)
 #subprocess.Popen(["python", 'test.py'])
 
-import os
+#import os
 
-os.system("python testScreen.py &")
-os.system("python test.py &")
+#os.system("python testScreen.py &")
+#os.system("python test.py &")
 
+import berryIMUfunction
  
+if(berryIMUfunction.power() = 0):
+    subprocess.run('vcgencmd display_power 0', shell=True)
+else:
+    subprocess.run('vcgencmd display_power 1', shell=True)
