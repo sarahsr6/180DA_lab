@@ -1,3 +1,10 @@
+from subprocess import run
+from time import sleep
+
+for i in range(10):
+  print("booooo class")
+  sleep(1)
+
 if __name__=='__main__':
 	x = "ECE_180_DA_DB"
 	if x == "EE_180_DA_DB":
