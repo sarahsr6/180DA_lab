@@ -1,6 +1,9 @@
 from subprocess import run
 from time import sleep
 
+username = input("Enter username: ")
+print("Username is: " + username)
+
 for i in range(5):
   print("booooo class")
   sleep(1)
