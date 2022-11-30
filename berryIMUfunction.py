@@ -17,15 +17,17 @@
 
 
 
-import sys
-import time
-import math
-import IMU
-import datetime
-import os
-import subprocess
+
 
 def power():
+    
+    import sys
+    import time
+    import math
+    import IMU
+    import datetime
+    import os
+    import subprocess
 
     RAD_TO_DEG = 57.29578
     M_PI = 3.14159265358979323846
