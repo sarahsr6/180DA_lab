@@ -13,7 +13,7 @@
 
 import berryIMUfunction
  
-if(berryIMUfunction.power() = 0):
+if(berryIMUfunction.power() == 0):
     subprocess.run('vcgencmd display_power 0', shell=True)
 else:
     subprocess.run('vcgencmd display_power 1', shell=True)
