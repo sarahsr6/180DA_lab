@@ -392,4 +392,5 @@ def power():
         power = 1
 
     power = CFangleX
+    
     return(power)
