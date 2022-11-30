@@ -12,6 +12,7 @@
 #os.system("python test.py &")
 
 import berryIMUfunction
+import subprocess
  
 if(berryIMUfunction.power() == 0):
     subprocess.run('vcgencmd display_power 0', shell=True)
