@@ -1,7 +1,7 @@
 from subprocess import run
 from time import sleep
 
-for i in range(10):
+for i in range(5):
   print("booooo class")
   sleep(1)
 
