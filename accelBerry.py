@@ -194,7 +194,7 @@ if(IMU.BerryIMUversion == 99):
     sys.exit()
 IMU.initIMU()       #Initialise the accelerometer, gyroscope and compass
 
-errorVar = 0
+
 while True:
 
     #Read the accelerometer,gyroscope and magnetometer values
@@ -385,14 +385,14 @@ while True:
     ##################### END Tilt Compensation ########################
 
 
-    #if 1:                       #Change to '0' to stop showing the angles from the accelerometer
-     #   outputString += "#  ACCX Angle %5.2f ACCY Angle %5.2f  #  " % (AccXangle, AccYangle)
+    if 1:                       #Change to '0' to stop showing the angles from the accelerometer
+        outputString += "#  ACCX Angle %5.2f ACCY Angle %5.2f  #  " % (AccXangle, AccYangle)
 
     #if 1:                       #Change to '0' to stop  showing the angles from the gyro
         #outputString +="\t# GRYX Angle %5.2f  GYRY Angle %5.2f  GYRZ Angle %5.2f # " % (gyroXangle,gyroYangle,gyroZangle)
 
-    if 1:                       #Change to '0' to stop  showing the angles from the complementary filter
-        outputString +="\t#  CFangleX Angle %5.2f   CFangleY Angle %5.2f  #" % (CFangleX,CFangleY)
+  #  if 1:                       #Change to '0' to stop  showing the angles from the complementary filter
+#        outputString +="\t#  CFangleX Angle %5.2f   CFangleY Angle %5.2f  #" % (CFangleX,CFangleY)
 
     #if 1:                       #Change to '0' to stop  showing the heading
       #  outputString +="\t# HEADING %5.2f  tiltCompensatedHeading %5.2f #" % (heading,tiltCompensatedHeading)
@@ -400,13 +400,8 @@ while True:
     #if 1:                       #Change to '0' to stop  showing the angles from the Kalman filter
       #  outputString +="# kalmanX %5.2f   kalmanY %5.2f #" % (kalmanX,kalmanY)
 
-    diff = CFangleX - errorVar
-        
-   # print(outputString)
-
-    print(diff)
+    print(outputString)
     
-    errorVar = CFangleX
  #   if((CFangleX<70) and (CFangleX>-70)):
  #       print("off")
   #      subprocess.run('vcgencmd display_power 0', shell=True)
