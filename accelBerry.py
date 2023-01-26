@@ -403,6 +403,7 @@ while True:
     diff = CFangleX - errorVar
         
    # print(outputString)
+
     print(diff)
     
     errorVar = CFangleX
