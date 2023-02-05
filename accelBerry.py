@@ -434,7 +434,7 @@ while True:
             ycount +=1
         
             #swipe up conditions:
-            if( (AccXangle >90) and (AccYangle >90) and (xcount >8) and (ycount >8) ):
+            if( (AccXangle >90) and (AccYangle >90) and (xcount >8) and (ycount >8) and (CFangleY > 120) ):
                 accelupCount += 1
             else:
                 accelupCount = 0
