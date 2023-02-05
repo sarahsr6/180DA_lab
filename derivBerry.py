@@ -429,7 +429,7 @@ while True:
   
   
     counter = counter - CFangleY
-    print(counter)
+    #print(counter)
     
     if ((CFangleX < -150) or (CFangleX >150)):      #considering 180 is maxxxx
         xcount +=1
@@ -454,6 +454,15 @@ while True:
                 ycount = 0
                 time.sleep(0.8)
                 
+            #swipe down call:
+            if( (counter < -15) ):
+                print("you swiped down")
+                #here we can send call to main pi via bluetooth
+                accelupCount = 0
+                xcount = 0
+                ycount = 0
+                time.sleep(0.8)
+                
 
                 
         
@@ -468,7 +477,7 @@ while True:
         acceldownCount = 0
         xcount = 0
         ycount = 0
- #       print("nothin")
+        print("nothin")
 
 
         
