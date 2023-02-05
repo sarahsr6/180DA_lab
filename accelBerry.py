@@ -199,8 +199,8 @@ IMU.initIMU()       #Initialise the accelerometer, gyroscope and compass
 
 #counts initilizations
 accelCount = 0
-accelXcount = 0
-accelYcount = 0
+xcount = 0
+ycount = 0
 
 
 
@@ -427,14 +427,13 @@ while True:
    #Final code magic mirror sensing:
     
     if ((CFangleX < -150) or (CFangleX >150)):      #considering 180 is maxxxx
-        print("x stable")
+        xcount +=1
         
         if( ((CFangleY >90) and (CFangleY <180)) or ((CFangleY >-180) and (CFangleY <-130)) ):
-            print("y stable")
-            print(accelCount)
+            ycount +=1
         
             #swipe up conditions:
-            if( (AccXangle >60) and (AccYangle >70) ):
+            if( (AccXangle >60) and (AccYangle >70) and (xcount >2) and (ycount >2)  ):
                 accelCount += 1
             else:
                 accelCount = 0
@@ -451,8 +450,8 @@ while True:
         
     else:                                           #reset all variables
         accelCount = 0
-        accelXcount = 0
-        accelYcount = 0
+        xcount = 0
+        ycount = 0
         print("nothin")
 
 
