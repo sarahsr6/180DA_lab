@@ -400,7 +400,7 @@ while True:
     #if 1:                       #Change to '0' to stop  showing the angles from the Kalman filter
       #  outputString +="# kalmanX %5.2f   kalmanY %5.2f #" % (kalmanX,kalmanY)
 
-    print(outputString)
+    print(CFangleX)
     
  #   if((CFangleX<70) and (CFangleX>-70)):
  #       print("off")
