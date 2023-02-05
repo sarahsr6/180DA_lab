@@ -429,7 +429,7 @@ while True:
   
   
     counter = counter - CFangleY
-   # print(counter)
+    print(counter)
     
     if ((CFangleX < -150) or (CFangleX >150)):      #considering 180 is maxxxx
         xcount +=1
@@ -468,7 +468,7 @@ while True:
         acceldownCount = 0
         xcount = 0
         ycount = 0
-        print("nothin")
+ #       print("nothin")
 
 
         
