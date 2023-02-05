@@ -431,6 +431,7 @@ while True:
         
         if( ((CFangleY >90) and (CFangleY <180)) or ((CFangleY >-180) and (CFangleY <-130)) ):
             print("y stable")
+            print(accelCount)
         
             #swipe up conditions:
             if( (AccXangle >60) and (AccYangle >70) ):
