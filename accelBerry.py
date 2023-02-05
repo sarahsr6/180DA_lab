@@ -198,8 +198,7 @@ IMU.initIMU()       #Initialise the accelerometer, gyroscope and compass
 
 
 #counts initilizations
-yAngleCount = 0
-
+accelCount = 0
 accelXcount = 0
 accelYcount = 0
 
@@ -433,12 +432,24 @@ while True:
         if( ((CFangleY >90) and (CFangleY <180)) or ((CFangleY >-180) and (CFangleY <-130)) ):
             print("y stable")
         
-        #swipe up conditions:
+            #swipe up conditions:
+            if( (AccXangle >60) and (AccYangle >70) ):
+                accelCount += 1
+            else:
+                accelCount = 0
+                
+            #swipe up call:
+            if(accelCount > 12):
+                print("you swiped up")
+                #here we can send call to main pi via bluetooth
+                accelCount = 0
+                
+                
         
         
         
     else:                                           #reset all variables
-        yAngleCount = 0
+        accelCount = 0
         accelXcount = 0
         accelYcount = 0
         print("nothin")
