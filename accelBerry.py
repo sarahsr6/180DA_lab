@@ -438,6 +438,8 @@ while True:
                 accelupCount += 1
             else:
                 accelupCount = 0
+                xcount = 0
+                ycount = 0
 
                 
             #swipe up call:
