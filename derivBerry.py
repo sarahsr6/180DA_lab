@@ -437,16 +437,9 @@ while True:
         if( ((CFangleY >90) and (CFangleY <180)) or ((CFangleY >-180) and (CFangleY <-130)) ):
             ycount +=1
         
-            #swipe up conditions:
-            if(  ):
-                accelupCount += 1
-            else:
-                accelupCount = 0
-                
-
-                
+      
             #swipe up call:
-            if( (counter > 15) ):
+            if( (counter > 15) and (xcount > 4) and (ycount > 4) ):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
                 accelupCount = 0
@@ -455,7 +448,7 @@ while True:
                 time.sleep(0.8)
                 
             #swipe down call:
-            if( (counter < -15) ):
+            if( (counter < -15) and (xcount > 4) and (ycount > 4)):
                 print("you swiped down")
                 #here we can send call to main pi via bluetooth
                 accelupCount = 0
