@@ -426,11 +426,15 @@ while True:
     
     
    #Final code magic mirror sensing:
-    print("hi")
+    
     if ((CFangleX < -150) or (CFangleX >150)):      #considering 180 is maxxxx
         print("x stable")
         
+        if( ((CFangleY >90) and (CFangleY <180)) or ((CFangleY >-180) and (CFangleY <-130)) ):
+            print("y stable")
+        
         #swipe up conditions:
+        
         
         
     else:                                           #reset all variables
