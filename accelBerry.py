@@ -447,6 +447,7 @@ while True:
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
+                time.sleep(0.08)
                 
                 
                 
@@ -464,7 +465,8 @@ while True:
                 #here we can send call to main pi via bluetooth
                 acceldownCount = 0
                 xcount = 0
-                ycount = 0    
+                ycount = 0 
+                time.sleep(0.08)
                 
         
         
