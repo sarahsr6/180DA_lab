@@ -441,6 +441,7 @@ while True:
         yAngleCount = 0
         accelXcount = 0
         accelYcount = 0
+        print("nothin")
 
 
         
