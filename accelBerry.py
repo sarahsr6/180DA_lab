@@ -434,7 +434,7 @@ while True:
             ycount +=1
         
             #swipe up conditions:
-            if( (AccXangle >90) and (AccYangle >90) and (xcount >8) and (ycount >8) and (CFangleY > 120) ):
+            if( (AccXangle >90) and (AccYangle >90) and (xcount >4) and (ycount >4) and (CFangleY > 120) ):
                 accelupCount += 1
             else:
                 accelupCount = 0
@@ -443,7 +443,7 @@ while True:
 
                 
             #swipe up call:
-            if( (accelupCount > 6) and (xcount >10) and (ycount >10)):
+            if( (accelupCount > 6) and (xcount >6) and (ycount >6)):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
                 accelupCount = 0
