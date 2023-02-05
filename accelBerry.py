@@ -434,7 +434,7 @@ while True:
             ycount +=1
         
             #swipe up conditions:
-            if( (AccXangle >60) and (AccYangle >70)  ):
+            if( (AccXangle >60) and (AccYangle >70) and (xcount >4) and (ycount >4) ):
                 accelupCount += 1
             else:
                 accelupCount = 0
@@ -447,7 +447,7 @@ while True:
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
-                time.sleep(0.2)
+                time.sleep(0.8)
                 
 
                 
