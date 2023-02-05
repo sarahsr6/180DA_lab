@@ -439,7 +439,7 @@ while True:
         
       
             #swipe up call:
-            if( (counter > 15) and (xcount > 1) and (ycount > 1) ):
+            if( (counter > 15) and (ycount > 1) ):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
                 accelupCount = 0
@@ -448,7 +448,7 @@ while True:
                 time.sleep(0.8)
                 
             #swipe down call:
-            if( (counter < -15) and (xcount > 1) and (ycount > 1) ):
+            if( (counter < -15) and (ycount > 1) ):
                 print("you swiped down")
                 #here we can send call to main pi via bluetooth
                 accelupCount = 0
