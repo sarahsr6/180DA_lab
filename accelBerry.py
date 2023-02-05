@@ -434,42 +434,48 @@ while True:
             ycount +=1
         
             #swipe up conditions:
-            if( (AccXangle >60) and (AccYangle >70) and (xcount >2) and (ycount >2)  ):
+            if( (AccXangle >60) and (AccYangle >70)  ):
                 accelupCount += 1
             else:
                 accelupCount = 0
 
                 
             #swipe up call:
-            if(accelupCount > 6):
+            if( (accelupCount > 6) and (xcount >4) and (ycount >4)):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
-                time.sleep(0.08)
+                time.sleep(0.2)
+                
+
                 
                 
                 
             
             #swipe down conditions:
-            if( (AccXangle <-60) and (AccYangle <-60) and (xcount >2) and (ycount >2)  ):
-                acceldownCount += 1
-            else:
-                acceldownCount = 0
+#            if( (AccXangle <-60) and (AccYangle <-60) and (xcount >2) and (ycount >2)  ):
+ #               acceldownCount += 1
+  #          else:
+   #             acceldownCount = 0
 
                 
             #swipe down call:
-            if(acceldownCount > 6):
-                print("you swiped down")
+   #         if(acceldownCount > 6):
+     #           print("you swiped down")
                 #here we can send call to main pi via bluetooth
-                acceldownCount = 0
-                xcount = 0
-                ycount = 0 
-                time.sleep(0.08)
+      #          acceldownCount = 0
+       #         xcount = 0
+        #        ycount = 0 
+         #       time.sleep(0.08)
                 
         
-        
+        else:
+            accelupCount = 0
+            acceldownCount = 0
+            xcount = 0
+            ycount = 0        
         
     else:                                           #reset all variables
         accelupCount = 0
