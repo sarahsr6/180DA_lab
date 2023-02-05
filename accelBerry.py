@@ -427,7 +427,7 @@ while True:
     
    #Final code magic mirror sensing:
     print("hi")
-    if ((CFangleX < -150) and (CFangleX >150)):      #considering 180 is maxxxx
+    if ((CFangleX < -150) or (CFangleX >150)):      #considering 180 is maxxxx
         print("x stable")
         
         #swipe up conditions:
