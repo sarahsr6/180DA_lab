@@ -452,7 +452,7 @@ while True:
                 
             
             #swipe down conditions:
-            if( (AccXangle <-160) and (AccYangle <-160) and (xcount >2) and (ycount >2)  ):
+            if( (AccXangle <-60) and (AccYangle <-60) and (xcount >2) and (ycount >2)  ):
                 acceldownCount += 1
             else:
                 acceldownCount = 0
