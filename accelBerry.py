@@ -437,12 +437,16 @@ while True:
                 accelCount += 1
             else:
                 accelCount = 0
+                xcount = 0
+                ycount = 0
                 
             #swipe up call:
             if(accelCount > 6):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
                 accelCount = 0
+                xcount = 0
+                ycount = 0
                 
                 
         
