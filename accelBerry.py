@@ -460,7 +460,7 @@ while True:
                 
             #swipe down call:
             if(acceldownCount > 6):
-                print("you swiped up")
+                print("you swiped down")
                 #here we can send call to main pi via bluetooth
                 acceldownCount = 0
                 xcount = 0
