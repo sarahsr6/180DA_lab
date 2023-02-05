@@ -405,8 +405,8 @@ while True:
     #if 1:                       #Change to '0' to stop  showing the angles from the gyro
         #outputString +="\t# GRYX Angle %5.2f  GYRY Angle %5.2f  GYRZ Angle %5.2f # " % (gyroXangle,gyroYangle,gyroZangle)
 
-    if 1:                       #Change to '0' to stop  showing the angles from the complementary filter
-        outputString +="\t#  CFangleX Angle %5.2f   CFangleY Angle %5.2f  #" % (CFangleX,CFangleY)
+ #   if 1:                       #Change to '0' to stop  showing the angles from the complementary filter
+   #     outputString +="\t#  CFangleX Angle %5.2f   CFangleY Angle %5.2f  #" % (CFangleX,CFangleY)
 
     #if 1:                       #Change to '0' to stop  showing the heading
       #  outputString +="\t# HEADING %5.2f  tiltCompensatedHeading %5.2f #" % (heading,tiltCompensatedHeading)
@@ -414,7 +414,7 @@ while True:
     #if 1:                       #Change to '0' to stop  showing the angles from the Kalman filter
       #  outputString +="# kalmanX %5.2f   kalmanY %5.2f #" % (kalmanX,kalmanY)
 
-    print(outputString)
+  #  print(outputString)
     
  #   if((CFangleX<70) and (CFangleX>-70)):
  #       print("off")
@@ -422,6 +422,26 @@ while True:
   #  else:
   #      print("on")
    #     subprocess.run('vcgencmd display_power 1', shell=True)
+    
+    
+    
+   #Final code magic mirror sensing:
+
+    if (CFangleX < -150) and (CFangleX >150):      #considering 180 is maxxxx
+        print("x stable")
+        
+        #swipe up conditions:
+        
+        
+    else:                                           #reset all variables
+        yAngleCount = 0
+        accelXcount = 0
+        accelYcount = 0
+
+
+        
+    
+    
 
     #slow program down a bit, makes the output more readable
     time.sleep(0.03)
