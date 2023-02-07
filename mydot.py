@@ -1,4 +1,11 @@
-from bluedot import BlueDot
-bd = BlueDot()
-bd.wait_for_press()
-print("You pressed the blue dot!")
+from bluedot import MockBlueDot
+from signal import pause
+
+def say_hello():
+    print("Hello World")
+
+bd = MockBlueDot()
+bd.when_pressed = say_hello
+
+bd.launch_mock_app()
+pause()
