@@ -500,7 +500,7 @@ while True:
             if( (counter > 15)  ):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
-                client.publish('ece180d/test', "true" , qos=1)
+                client.publish('ece180d/test', "false" , qos=0)
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
@@ -510,7 +510,7 @@ while True:
             if( (counter < -15)  ):
                 print("you swiped down")
                 #here we can send call to main pi via bluetooth
-                client.publish('ece180d/test', "false", qos=0)
+                client.publish('ece180d/test', "true", qos=1)
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
