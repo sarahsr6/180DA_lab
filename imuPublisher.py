@@ -504,7 +504,7 @@ while True:
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
-                time.sleep(0.8)
+                time.sleep(2)
                 
             #swipe down call:
             if( (counter < -15)  ):
@@ -514,7 +514,7 @@ while True:
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
-                time.sleep(0.8)
+                time.sleep(2)
                         
         
         else:
