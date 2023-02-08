@@ -262,7 +262,7 @@ xcount = 0
 ycount = 0
 counter = 0
 
-
+state = 'idk'
 
 
 
@@ -497,20 +497,22 @@ while True:
         
       
             #swipe up call:
-            if( (counter > 15)  ):
+            if( (counter > 15) and (state != 'up') ):
                 print("you swiped up")
                 #here we can send call to main pi via bluetooth
                 client.publish('ece180d/test', "MONITOROFF" , qos=0)
+                state = 'up'
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
                 time.sleep(2)
                 
             #swipe down call:
-            if( (counter < -15)  ):
+            if( (counter < -15) and (state != 'down') ):
                 print("you swiped down")
                 #here we can send call to main pi via bluetooth
                 client.publish('ece180d/test', "MONITORON", qos=1)
+                state = 'down'
                 accelupCount = 0
                 xcount = 0
                 ycount = 0
