@@ -7,7 +7,7 @@ import datetime
 import os
 import subprocess
 
-
+time.sleep(10)
 import paho.mqtt.client as mqtt
 import numpy as np
 
