@@ -530,7 +530,7 @@ while True:
         acceldownCount = 0
         xcount = 0
         ycount = 0
-        print("nothin")
+        #print("nothin")
        # client.publish('ece180d/test', "nothin", qos=1)
 
 
